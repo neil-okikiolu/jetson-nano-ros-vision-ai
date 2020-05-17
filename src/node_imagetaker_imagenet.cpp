@@ -70,12 +70,17 @@ void img_callback( const sensor_msgs::ImageConstPtr& input )
     // we are doing a 180 deg flip since
     // my camera is upside down
     const int img_flip_mode_ = -1;
-    // flip the image
-    cv::flip(cv_ptr->image, cv_ptr_flip->image, img_flip_mode_);
+    // flip the image [if your camera is upside down]
+    // cv::flip(cv_ptr->image, cv_ptr_flip->image, img_flip_mode_);
     
     // convert converted image back to a sensor_msgs::ImagePtr
     // for use with nvidia / other ML algorithms
-    sensor_msgs::ImagePtr flippedImage = cv_ptr_flip->toImageMsg();
+    
+    // comment this line if you used the flipped image
+    sensor_msgs::ImagePtr flippedImage = cv_ptr->toImageMsg();
+    
+    // uncomment this line if you used the flipped image
+    // sensor_msgs::ImagePtr flippedImage = cv_ptr_flip->toImageMsg();
 
     // convert the image TO reside on GPU
     // the converting TO and converting FROM are the SAME funtion name
