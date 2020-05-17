@@ -1,8 +1,3 @@
-/**
-* This node takes images from the jetson camera (using a ros driver node)
-* and saves it to disk, for now...
-*/
-
 #include <iostream>
 #include <ctime>
 #include <sstream>
