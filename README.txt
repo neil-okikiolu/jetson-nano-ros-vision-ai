@@ -1,6 +1,11 @@
 This is the code accompanying the blog post.
 
-This code is for ROS C++ image inferencing nodes. 
+This code is for ROS C++ image inferencing nodes.
+
+The model API's are here:
+https://github.com/dusty-nv/jetson-inference
+
+Thanks to Nvidia!
 
 Download these models (if you don't have them)
 
