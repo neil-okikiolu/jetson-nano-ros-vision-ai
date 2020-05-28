@@ -1,5 +1,7 @@
 This is the code accompanying the blog post.
 
+This code is for ROS C++ image inferencing nodes. 
+
 Download these models (if you don't have them)
 
 Image Net
